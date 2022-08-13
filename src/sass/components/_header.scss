@@ -1,0 +1,28 @@
+.header{
+    background-color: $bg-pri;
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    &__navbar{
+        flex: 0 1 auto;
+        &__nav-item:not(:last-child){
+            padding: 0 5rem;
+        }
+    }
+
+    &__body{
+        flex: 1 1 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+}
+
+// Override Navbar section
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding-right: 0;
+    padding-left: 0;
+}

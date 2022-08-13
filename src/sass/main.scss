@@ -1,1 +1,8 @@
+//Abstract
+@import "./abstract/variables";
+// Base
 @import "./base/body";
+
+// Components
+@import "./components/header";
+@import "./components/wbody";

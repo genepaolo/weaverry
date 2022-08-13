@@ -1,0 +1,15 @@
+.wbody{
+    height: 100vh;
+    &__svgs{
+        position: relative;
+        &__svg{
+            position: absolute;
+            top: -10rem;
+            z-index: 0;
+        }
+        
+    }
+    &__content{
+        position: relative;
+    }
+}
