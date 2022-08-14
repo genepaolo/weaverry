@@ -1,6 +1,6 @@
 function Navbar() {
     return (
-        <nav class="header__navbar navbar navbar-expand-lg">
+        <nav class="header__navbar navbar navbar-expand-lg animate__animated animate__slideInDown">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,9 +1,13 @@
+import {ReactComponent as Weaverry} from "../../resources/HeaderSVGS/weaverry.svg";
+
 function HeaderBody(){
     return(
         <div className="header__body">
             <div className="header__body__container">
-                <p>Weaverry</p>
-                <p>slogan slogan slogan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, placeat numquam </p>
+                <Weaverry className="animate__animated animate__fadeInLeft"></Weaverry>
+                <br></br>
+                <br></br>
+                <p className="header__body__container__slogan animate__animated animate__fadeInLeftBig"><i>slogan slogan slogan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, placeat numquam</i></p>
             </div>
         </div>
     );

@@ -1,8 +1,18 @@
 body {
     margin: 0;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    font-family: 'Inter', sans-serif;
 }
 
 .wcontainer{
   padding: 2% 5%;
+}
+
+.noscroll { 
+  position: fixed;
+  overflow-y: hidden;
+  width: 100%;
 }
   

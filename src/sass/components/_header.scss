@@ -1,6 +1,6 @@
 .header{
     background-color: $bg-pri;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -17,11 +17,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        user-select: none;
+        &__container{
+            transform: translateY(-7.5rem);
+            &__slogan{
+                // Temp
+                font-size: $fs-md;
+                color: $fc-pri;
+            }
+        }
     }
 }
 
 // Override Navbar section
+.nav-link{
+    font-size: $fs-md;
+    font-family: 'Inter', sans-serif;
+    color: $fc-pri;
+}
+
+.nav-link:focus, .nav-link:hover{
+    animation: swing;
+    animation-duration: 1s;
+}
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     padding-right: 0;
     padding-left: 0;

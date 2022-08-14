@@ -1,15 +1,48 @@
 .wbody{
-    height: 100vh;
+    color: $fc-sec;
+    height: auto;
+    background-color: $bg-sec;
     &__svgs{
         position: relative;
         &__svg{
             position: absolute;
-            top: -10rem;
+            top: -20rem;
             z-index: 0;
+            &--1{
+                animation: moveUp1;
+                animation-duration: $t-init;
+                animation-timing-function: ease;
+            }
+            &--2{
+                animation: moveUp2;
+                animation-duration: $t-init;
+            }
+            &--3{
+                animation: moveUp3;
+                animation-duration: $t-init;
+            }
         }
         
     }
     &__content{
         position: relative;
+        &__section{
+            padding: 10rem;
+            &__container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                &__col{
+                    &__row{
+                        &__pic{
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & p{
+        font-size: $fs-lg;
     }
 }

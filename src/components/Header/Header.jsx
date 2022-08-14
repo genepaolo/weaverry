@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
-import HeaderBody
- from "./HeaderBody";
+import HeaderBody from "./HeaderBody";
 function Header(){
     return(
         <div className="header wcontainer">

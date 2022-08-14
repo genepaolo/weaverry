@@ -1,19 +1,25 @@
-import {ReactComponent as Vector1} from "../../resources/BodySVGS/vector1.svg";
-import {ReactComponent as Vector2} from "../../resources/BodySVGS/vector2.svg";
-
+import {ReactComponent as Vector1} from "../../resources/body/vector1.svg";
+import {ReactComponent as Vector2} from "../../resources/body/vector2.svg";
+import {ReactComponent as Vector3} from "../../resources/body/vector3.svg";
+import Carousel from "./Carousel";
 function Body(){
     return(
         <div className="wbody">
             <div className="wbody__svgs">
                 <Vector1 className="wbody__svgs__svg wbody__svgs__svg--1"></Vector1>
+                <Vector3 className="wbody__svgs__svg wbody__svgs__svg--3"></Vector3>
                 <Vector2 className="wbody__svgs__svg wbody__svgs__svg--2"></Vector2>
             </div>
             <div className="wbody__content wcontainer">
-                <div className="wbody__content__about"></div>
-                <div className="wbody__content__technologies"></div>
-                <div className="wbody__content__projects"></div>
+                <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
+                        dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
+                </div>
+                <div className="wbody__content__section wbody__content__section--tech">
+                    <Carousel></Carousel>
+                </div>
+                <div className="wbody__content__section wbody__content__section--projects"></div>
             </div>
-            <div className="tempfill"></div>
         </div>
     );
 }

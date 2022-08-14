@@ -1,14 +1,54 @@
+@keyframes moveUp1 {
+  0% {
+    transform: translateY(40rem);
+  }
+  60% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUp2 {
+  0% {
+    transform: translateY(25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUp3 {
+  0% {
+    transform: translateY(20rem);
+  }
+  40% {
+    transform: translateY(-3rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+  font-family: "Inter", sans-serif;
 }
 
 .wcontainer {
   padding: 2% 5%;
 }
 
+.noscroll {
+  position: fixed;
+  overflow-y: hidden;
+  width: 100%;
+}
+
 .header {
   background-color: #7BC0FF;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -25,6 +65,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  user-select: none;
+}
+.header__body__container {
+  transform: translateY(-7.5rem);
+}
+.header__body__container__slogan {
+  font-size: 1.4rem;
+  color: #FFFDF4;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  color: #FFFDF4;
+}
+
+.nav-link:focus, .nav-link:hover {
+  animation: swing;
+  animation-duration: 1s;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -33,18 +92,47 @@ body {
 }
 
 .wbody {
-  height: 100vh;
+  color: #706C61;
+  height: auto;
+  background-color: #FFFDF4;
 }
 .wbody__svgs {
   position: relative;
 }
 .wbody__svgs__svg {
   position: absolute;
-  top: -10rem;
+  top: -20rem;
   z-index: 0;
+}
+.wbody__svgs__svg--1 {
+  animation: moveUp1;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+}
+.wbody__svgs__svg--2 {
+  animation: moveUp2;
+  animation-duration: 1.5s;
+}
+.wbody__svgs__svg--3 {
+  animation: moveUp3;
+  animation-duration: 1.5s;
 }
 .wbody__content {
   position: relative;
+}
+.wbody__content__section {
+  padding: 10rem;
+}
+.wbody__content__section__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wbody__content__section__container__col__row__pic {
+  height: auto;
+  width: 100%;
+}
+.wbody p {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
