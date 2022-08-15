@@ -8,7 +8,7 @@ import Aos from 'aos';
 function App() {
 
   // Initialize AOS Animations
-  Aos.init();
+  Aos.init({ once: true, });
 
   useEffect(() =>{
 

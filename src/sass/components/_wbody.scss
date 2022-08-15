@@ -27,22 +27,53 @@
     &__content{
         position: relative;
         &__section{
-            padding: 10rem;
+            padding: 5rem 10rem;
             &__container{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
                 &__col{
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr;
                     &__row{
-                        &__pic{
-                            height: auto;
-                            width: 100%;
+                        margin: 10vh 0;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        &--pic{
+                            & img{
+                                height: auto;
+                                width: 100%;
+                            }
+                            padding: 2rem;
+                        }
+                        &--info{
+                            padding: 2rem;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
                         }
                     }
                 }
             }
+            &--tech{
+                max-width: 100%;
+                &__text{
+                    
+                    transform: translateX(150%);
+                    white-space: nowrap;
+                    display: inline-block;
+                    animation: marquee 8s linear infinite;
+                    & p{
+                        & i{font-size: $fs-xlg;}
+                        display: inline-block;
+                    }
+                    
+                }
+            }
+            
         }
     }
     & p{
         font-size: $fs-lg;
     }
 }
+
+  

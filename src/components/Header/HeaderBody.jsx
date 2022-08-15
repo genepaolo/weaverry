@@ -1,4 +1,4 @@
-import {ReactComponent as Weaverry} from "../../resources/HeaderSVGS/weaverry.svg";
+import {ReactComponent as Weaverry} from "../../resources/header/weaverry.svg";
 
 function HeaderBody(){
     return(
