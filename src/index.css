@@ -40,8 +40,8 @@ body {
   margin: 0;
   font-size: 14px;
   width: 100%;
-  position: relative;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 .wcontainer {
@@ -73,6 +73,11 @@ body {
 .header__navbar__nav-item:not(:last-child) {
   padding: 0 5rem;
 }
+@media (max-width: 990px) {
+  .header__navbar__nav-item:not(:last-child) {
+    padding: 0 5rem;
+  }
+}
 .header__body {
   flex: 1 1 auto;
   text-align: center;
@@ -84,6 +89,10 @@ body {
 .header__body__container {
   transform: translateY(-7.5rem);
 }
+.header__body__container__logo {
+  width: 100%;
+  height: auto;
+}
 .header__body__container__slogan {
   font-size: 1.4rem;
   color: #FFFDF4;
@@ -93,6 +102,10 @@ body {
   font-size: 1.4rem;
   font-family: "Inter", sans-serif;
   color: #FFFDF4;
+}
+
+.navbar-nav {
+  flex-direction: row;
 }
 
 .nav-link:focus, .nav-link:hover {
@@ -117,6 +130,8 @@ body {
   position: absolute;
   top: -20rem;
   z-index: 0;
+  width: 100%;
+  height: auto;
 }
 .wbody__svgs__svg--1 {
   animation: moveUp1;

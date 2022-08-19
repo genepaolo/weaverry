@@ -8,6 +8,8 @@
             position: absolute;
             top: -20rem;
             z-index: 0;
+            width: 100%;
+            height: auto;
             &--1{
                 animation: moveUp1;
                 animation-duration: $t-init;
