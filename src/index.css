@@ -45,7 +45,7 @@ body {
 }
 
 .wcontainer {
-  padding: 2% 5%;
+  padding: 5% 5%;
 }
 
 .noscroll {
@@ -135,7 +135,7 @@ body {
   position: relative;
 }
 .wbody__content__section {
-  padding: 5rem 10rem;
+  padding: 8rem 10rem;
 }
 .wbody__content__section__container__col {
   display: grid;
@@ -175,8 +175,36 @@ body {
 .wbody__content__section--tech__text p i {
   font-size: 3rem;
 }
+.wbody__content__section--services {
+  background-color: #7BC0FF;
+}
 .wbody p {
   font-size: 2rem;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.servicecard {
+  background-color: #FFFDF4;
+  color: rgb(41, 40, 40);
+  width: 30%;
+  text-align: center;
+  border-radius: 5%;
+}
+.servicecard div {
+  padding: 1rem 0.5rem;
+}
+.servicecard i {
+  font-size: 3rem;
+}
+.servicecard p {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

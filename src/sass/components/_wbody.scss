@@ -27,7 +27,7 @@
     &__content{
         position: relative;
         &__section{
-            padding: 5rem 10rem;
+            padding: 8rem 10rem;
             &__container{
                 &__col{
                     display: grid;
@@ -68,6 +68,9 @@
                     
                 }
             }
+            &--services{
+                background-color: $bg-pri;
+            }
             
         }
     }
@@ -76,4 +79,46 @@
     }
 }
 
-  
+
+// Service Card
+.services{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.servicecard{
+    background-color: $bg-sec;
+    color: $fc-ter;
+    width: 30%;
+    text-align: center;
+    
+    border-radius: 5%;
+    & div{
+        padding: 1rem 0.5rem;
+    }
+    & i{
+        font-size: $fs-xlg;
+    }
+    & p{
+        font-size: $fs-sm;
+    }
+
+}
+
+#servicecard-top{
+    background-size: cover;
+    border-radius: 5% 5% 0% 0%;
+}
+
+#servicecard-bottom{
+    margin: 0 auto;
+    padding: 0.4rem;
+    width: 50%;
+    background-color: white;
+    opacity: 0.8;
+    transform: translate(2rem);
+}

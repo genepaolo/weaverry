@@ -3,6 +3,7 @@ import {ReactComponent as Vector2} from "../../resources/body/vector2.svg";
 import {ReactComponent as Vector3} from "../../resources/body/vector3.svg";
 import Carousel from "./Carousel";
 import Scroller from "./Scroller"
+import Services from "./Services"
 import ContactUs from "./ContactUs";
 function Body(){
 
@@ -13,18 +14,24 @@ function Body(){
                 <Vector3 className="wbody__svgs__svg wbody__svgs__svg--3"></Vector3>
                 <Vector2 className="wbody__svgs__svg wbody__svgs__svg--2"></Vector2>
             </div>
-            <div className="wbody__content wcontainer">
-                <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about">
+            <div className="wbody__content">
+                <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about ">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
                         dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
                 </div>
-                <div className="wbody__content__section wbody__content__section--carousel">
+                {/* <div className="wbody__content__section wbody__content__section--carousel">
                     <Carousel></Carousel>
                 </div>
                 <div className="wbody__content__section wbody__content__section--tech">
                     <Scroller></Scroller>
+                </div> */}
+
+                <div className="wbody__content__section wbody__content__section--services">
+                    <Services></Services>
                 </div>
-                <div className="wbody__content__section wbody__content__section--contactus">
+                <div className="wbody__content__section wbody__content__section--tech ">
+                </div>
+                <div className="wbody__content__section wbody__content__section--contactus ">
                     <ContactUs></ContactUs>
                 </div>
             </div>
