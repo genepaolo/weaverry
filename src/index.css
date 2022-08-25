@@ -40,12 +40,18 @@ body {
   margin: 0;
   font-size: 14px;
   width: 100%;
-  position: relative;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .wcontainer {
   padding: 5% 5%;
+}
+@media (max-width: 990px) {
+  .wcontainer {
+    padding: 3% 3%;
+  }
 }
 
 .noscroll {
@@ -73,6 +79,11 @@ body {
 .header__navbar__nav-item:not(:last-child) {
   padding: 0 5rem;
 }
+@media (max-width: 990px) {
+  .header__navbar__nav-item:not(:last-child) {
+    padding: 0 5rem;
+  }
+}
 .header__body {
   flex: 1 1 auto;
   text-align: center;
@@ -84,6 +95,16 @@ body {
 .header__body__container {
   transform: translateY(-7.5rem);
 }
+.header__body__container__logo {
+  width: 50%;
+  margin: auto;
+  height: auto;
+}
+@media (max-width: 990px) {
+  .header__body__container__logo {
+    width: 100%;
+  }
+}
 .header__body__container__slogan {
   font-size: 1.4rem;
   color: #FFFDF4;
@@ -93,6 +114,10 @@ body {
   font-size: 1.4rem;
   font-family: "Inter", sans-serif;
   color: #FFFDF4;
+}
+
+.navbar-nav {
+  flex-direction: row;
 }
 
 .nav-link:focus, .nav-link:hover {
@@ -117,6 +142,8 @@ body {
   position: absolute;
   top: -20rem;
   z-index: 0;
+  width: 100%;
+  height: auto;
 }
 .wbody__svgs__svg--1 {
   animation: moveUp1;
@@ -135,7 +162,12 @@ body {
   position: relative;
 }
 .wbody__content__section {
-  padding: 8rem 10rem;
+  padding: 7% 10%;
+}
+@media (max-width: 990px) {
+  .wbody__content__section {
+    padding: 5% 3%;
+  }
 }
 .wbody__content__section__container__col {
   display: grid;
@@ -175,9 +207,6 @@ body {
 .wbody__content__section--tech__text p i {
   font-size: 3rem;
 }
-.wbody__content__section--services {
-  background-color: #7BC0FF;
-}
 .wbody p {
   font-size: 2rem;
 }
@@ -189,13 +218,41 @@ body {
   max-width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 1200px) {
+  .services {
+    max-width: 100%;
+  }
+}
+@media (max-width: 990px) {
+  .services {
+    flex-direction: column;
+  }
+}
 
 .servicecard {
-  background-color: #FFFDF4;
+  background-color: #7BC0FF;
   color: rgb(41, 40, 40);
   width: 30%;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
   border-radius: 5%;
+  overflow: hidden;
+}
+@media (max-width: 990px) {
+  .servicecard {
+    width: 80%;
+  }
+}
+@media (max-width: 990px) {
+  .servicecard:not(:first-child) {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 990px) {
+  .servicecard:not(:last-child) {
+    margin-bottom: 5rem;
+  }
 }
 .servicecard div {
   padding: 1rem 0.5rem;
@@ -205,6 +262,23 @@ body {
 }
 .servicecard p {
   font-size: 1rem;
+}
+
+#servicecard-top {
+  background-size: cover;
+  border-radius: 5% 5% 0% 0%;
+  height: 15rem;
+}
+
+#servicecard-header {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  padding: 0.4rem;
+  width: 100%;
+  background-color: white;
+  opacity: 0.9;
+  transform: rotate(-25deg) translate(-25%, -1rem);
 }
 
 /*# sourceMappingURL=index.css.map */

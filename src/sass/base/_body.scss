@@ -2,12 +2,16 @@ body {
     margin: 0;
     font-size: 14px;
     width: 100%;
-    position: relative;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .wcontainer{
   padding: 5% 5%;
+  @include respond(tab-port){
+    padding: 3% 3%;
+}
 }
 
 .noscroll { 

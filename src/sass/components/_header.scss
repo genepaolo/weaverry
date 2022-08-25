@@ -6,8 +6,12 @@
     flex-flow: column;
     &__navbar{
         flex: 0 1 auto;
+        
         &__nav-item:not(:last-child){
             padding: 0 5rem;
+            @include respond(tab-port){
+                padding: 0 5rem;
+            }
         }
     }
 
@@ -20,6 +24,14 @@
         user-select: none;
         &__container{
             transform: translateY(-7.5rem);
+            &__logo{
+                width: 50%;
+                margin: auto;
+                @include respond(tab-port){
+                    width: 100%;
+                }
+                height: auto;
+            }
             &__slogan{
                 // Temp
                 font-size: $fs-md;
@@ -36,6 +48,10 @@
     color: $fc-pri;
 }
 
+
+.navbar-nav{
+    flex-direction: row;
+}
 .nav-link:focus, .nav-link:hover{
     animation: swing;
     animation-duration: 1s;
