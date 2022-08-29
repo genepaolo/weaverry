@@ -1,10 +1,9 @@
 import {ReactComponent as Vector1} from "../../resources/body/vector1.svg";
 import {ReactComponent as Vector2} from "../../resources/body/vector2.svg";
 import {ReactComponent as Vector3} from "../../resources/body/vector3.svg";
-import Carousel from "./Carousel";
-import Scroller from "./Scroller"
 import Services from "./Services"
 import ContactUs from "./ContactUs";
+import Tech from "./Tech";
 function Body(){
 
     return(
@@ -30,6 +29,7 @@ function Body(){
                     <Services></Services>
                 </div>
                 <div className="wbody__content__section wbody__content__section--tech ">
+                    <Tech></Tech>
                 </div>
                 <div className="wbody__content__section wbody__content__section--contactus ">
                     <ContactUs></ContactUs>

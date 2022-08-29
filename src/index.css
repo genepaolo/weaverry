@@ -60,6 +60,11 @@ body {
   width: 100%;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .footer {
   background-color: #706C61;
   text-align: center;
@@ -194,18 +199,7 @@ body {
 }
 .wbody__content__section--tech {
   max-width: 100%;
-}
-.wbody__content__section--tech__text {
-  transform: translateX(150%);
-  white-space: nowrap;
-  display: inline-block;
-  animation: marquee 8s linear infinite;
-}
-.wbody__content__section--tech__text p {
-  display: inline-block;
-}
-.wbody__content__section--tech__text p i {
-  font-size: 3rem;
+  background-color: #7BC0FF;
 }
 .wbody p {
   font-size: 2rem;
@@ -215,16 +209,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 80%;
-  margin: 0 auto;
-}
-@media (max-width: 1200px) {
-  .services {
-    max-width: 100%;
-  }
+  max-width: 100%;
 }
 @media (max-width: 990px) {
   .services {
+    max-width: 80%;
+    margin: 0 auto;
     flex-direction: column;
   }
 }
@@ -233,7 +223,8 @@ body {
   background-color: #7BC0FF;
   color: rgb(41, 40, 40);
   width: 30%;
-  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  box-shadow: 0.1rem 0.1rem 0.3rem black;
   text-align: center;
   position: relative;
   border-radius: 5%;
@@ -242,6 +233,7 @@ body {
 @media (max-width: 990px) {
   .servicecard {
     width: 80%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 990px) {
@@ -279,6 +271,20 @@ body {
   background-color: white;
   opacity: 0.9;
   transform: rotate(-25deg) translate(-25%, -1rem);
+}
+
+.tech {
+  color: white;
+  text-align: center;
+}
+.tech div {
+  text-align: center;
+  padding: 3rem 0;
+  display: inline-block;
+}
+.tech p {
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=index.css.map */
