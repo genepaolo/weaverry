@@ -6,11 +6,11 @@
     flex-flow: column;
     &__navbar{
         flex: 0 1 auto;
-        
-        &__nav-item:not(:last-child){
-            padding: 0 5rem;
+        padding: 0 3rem;
+        &__nav-item{
+            padding: 0 4rem;
             @include respond(tab-port){
-                padding: 0 5rem;
+                padding: 0 2rem;
             }
         }
     }
@@ -42,8 +42,22 @@
 }
 
 // Override Navbar section
+
+.navbar-brand{
+    @include respond(phone){
+        display:block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+}
+
 .nav-link{
     font-size: $fs-md;
+    @include respond(phone){
+        font-size: $fs-sm;
+    }
     font-family: 'Inter', sans-serif;
     color: $fc-pri;
 }

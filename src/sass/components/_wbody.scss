@@ -69,6 +69,9 @@
     }
     & p{
         font-size: $fs-lg;
+        @include respond(phone){
+            font-size: $fs-md;
+        }
     }
 }
 
@@ -153,4 +156,28 @@
         font-weight: 400;
         font-size: $fs-md;
     }
+}
+
+input, textarea{
+    margin: 1rem 0;
+    padding: 0.7rem;
+    font-size: $fs-md;
+    display: block;
+    width: 100%;
+    max-width: 50rem;
+}
+
+input{
+    max-width: 20rem;
+}
+
+textarea{
+    max-width: 40rem;
+}
+
+button{
+    font-size: $fs-md;
+    padding: 0 1rem;
+    background-color: $bg-pri;
+    color: white;
 }

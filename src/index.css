@@ -80,13 +80,14 @@ h2 {
 }
 .header__navbar {
   flex: 0 1 auto;
+  padding: 0 3rem;
 }
-.header__navbar__nav-item:not(:last-child) {
-  padding: 0 5rem;
+.header__navbar__nav-item {
+  padding: 0 4rem;
 }
 @media (max-width: 990px) {
-  .header__navbar__nav-item:not(:last-child) {
-    padding: 0 5rem;
+  .header__navbar__nav-item {
+    padding: 0 2rem;
   }
 }
 .header__body {
@@ -115,10 +116,24 @@ h2 {
   color: #FFFDF4;
 }
 
+@media (max-width: 600px) {
+  .navbar-brand {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
 .nav-link {
   font-size: 1.4rem;
   font-family: "Inter", sans-serif;
   color: #FFFDF4;
+}
+@media (max-width: 600px) {
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
 .navbar-nav {
@@ -204,6 +219,11 @@ h2 {
 .wbody p {
   font-size: 2rem;
 }
+@media (max-width: 600px) {
+  .wbody p {
+    font-size: 1.4rem;
+  }
+}
 
 .services {
   display: flex;
@@ -285,6 +305,30 @@ h2 {
 .tech p {
   font-weight: 400;
   font-size: 1.4rem;
+}
+
+input, textarea {
+  margin: 1rem 0;
+  padding: 0.7rem;
+  font-size: 1.4rem;
+  display: block;
+  width: 100%;
+  max-width: 50rem;
+}
+
+input {
+  max-width: 20rem;
+}
+
+textarea {
+  max-width: 40rem;
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  background-color: #7BC0FF;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */

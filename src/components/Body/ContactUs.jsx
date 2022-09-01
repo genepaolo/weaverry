@@ -1,16 +1,15 @@
 function ContactUs(){
     return(
-        <div >
-            <p>Contact Us: a;lsdkfjoa@gmail.com </p>
-            <p>We look forward to working with you</p>
-            <form>
-                <label>Name</label>
-                <input></input>
-                <label>Email</label>
-                <input></input>
-                <label>Message</label>
-                <textarea></textarea>
-                <button>Send</button>
+        <div className="contactus">
+            <h1>Contact Us</h1>
+            <p>We look forward to working with you!</p>
+            <br></br>
+            <form action="https://formsubmit.co/a15767324075deea15db9fa3f1d7c219" method="POST">
+                <input type="text" name="Name" placeholder="Full Name" required></input>
+                <input type="text" name="email" placeholder="Email Address" required></input>
+                <textarea name="Message" placeholder="Message" rows="4" required></textarea>
+                <input type="hidden" name="_autoresponse" value="Thank you for your email. We will reach back with you shortly!"></input>
+                <button type="submit">Send</button>
             </form>
         </div>
     );
