@@ -8,7 +8,10 @@ function Navbar() {
                 </a>
                 <ul class="navbar-nav ms-auto">
                         <li class="header__navbar__nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">About</a>
+                            <a class="nav-link" aria-current="page" href="/">About</a>
+                        </li>
+                        <li class="header__navbar__nav-item">
+                            <a class="nav-link" href="/">Services</a>
                         </li>
                         <li class="header__navbar__nav-item">
                             <a class="nav-link" href="/">Contact Us</a>

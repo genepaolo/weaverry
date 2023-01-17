@@ -5,3 +5,5 @@ created by Gene Flores
 
 https://animate.style/
 https://michalsnik.github.io/aos/
+fontawesome.com
+

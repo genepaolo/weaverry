@@ -1,7 +1,7 @@
 function Footer(){
     return(
         <div className="footer wcontainer">
-            copyright @
+            © 2022 Weaverry. All rights reserved. 
             Made by: Gene Flores
             Design by: Eddie MinHo Kim
         </div>

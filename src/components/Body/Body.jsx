@@ -1,10 +1,10 @@
 import {ReactComponent as Vector1} from "../../resources/body/vector1.svg";
 import {ReactComponent as Vector2} from "../../resources/body/vector2.svg";
 import {ReactComponent as Vector3} from "../../resources/body/vector3.svg";
-import Carousel from "./Carousel";
-import Scroller from "./Scroller"
+import Services from "./Services"
 import ContactUs from "./ContactUs";
 import Section from "./Section";
+import Tech from "./Tech";
 function Body(){
 
     return(
@@ -27,13 +27,26 @@ function Body(){
                     
                 </Section>
                 {/* {/* <div className="wbody__content__section wbody__content__section--carousel">
+                <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
+                        dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
+                </div>
+                {/* <div className="wbody__content__section wbody__content__section--carousel">
                     <Carousel></Carousel>
                 </div> */}
                 <div className="wbody__content__section wbody__content__section--tech">
                     <Scroller></Scroller>
+                </div> */}
+
+                <div className="wbody__content__section wbody__content__section--services">
+                    <Services></Services>
+                </div>
+                <div className="wbody__content__section wbody__content__section--tech ">
+                    <Tech></Tech>
                 </div>
 
                 <Section title="Contact Us" subtitle="We look forward to working with you">
+                <div className="wbody__content__section wbody__content__section--contactus ">
                     <ContactUs></ContactUs>
                 </Section>
             </div>

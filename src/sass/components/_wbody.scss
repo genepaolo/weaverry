@@ -29,7 +29,10 @@
     &__content{
         position: relative;
         &__section{
-            padding: 5rem 10rem;
+            padding: 7% 10%;
+            @include respond(tab-port){
+                padding: 5% 3%;
+            }
             &__container{
                 &__col{
                     display: grid;
@@ -57,24 +60,18 @@
             }
             &--tech{
                 max-width: 100%;
-                &__text{
-                    
-                    transform: translateX(150%);
-                    white-space: nowrap;
-                    display: inline-block;
-                    animation: marquee 8s linear infinite;
-                    & p{
-                        & i{font-size: $fs-xlg;}
-                        display: inline-block;
-                    }
-                    
-                }
+                background-color: $bg-pri;
+            }
+            &--services{
             }
             
         }
     }
     & p{
         font-size: $fs-lg;
+        @include respond(phone){
+            font-size: $fs-md;
+        }
     }
 
     &__section:not(first-child){
@@ -82,4 +79,109 @@
     }
 }
 
-  
+
+// Service Card
+.services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    @include respond(tab-port){
+        max-width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+}
+
+.servicecard{
+    background-color: $bg-pri;
+    color: $fc-ter;
+    width: 30%;
+    padding: 0 0 2rem 0;
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    @include respond(tab-land){
+    }
+    @include respond(tab-port){
+        width: 80%;
+        margin: 0 auto;
+    }
+    &:not(:first-child){
+        @include respond(tab-port){
+            margin-top: 5rem;
+        }
+    }
+    &:not(:last-child){
+        @include respond(tab-port){
+            margin-bottom: 5rem;
+        }
+    }
+    text-align: center;
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+    & div{
+        padding: 1rem 0.5rem;
+    }
+    & i{
+        font-size: $fs-xlg;
+    }
+    & p{
+        font-size: $fs-sm;
+    }
+
+}
+
+#servicecard-top{
+    background-size: cover;
+    border-radius: 5% 5% 0% 0%;
+    height: 15rem;
+}
+
+#servicecard-header{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    padding: 0.4rem;
+    width: 100%;
+    background-color: white;
+    opacity: 0.90;
+    transform: rotate(-25deg) translate(-25%, -1rem);
+}
+
+.tech{
+    color: white;
+    text-align: center;
+    & div{
+        text-align: center;
+        padding: 3rem 0;
+        display: inline-block;
+    }
+    & p{
+        font-weight: 400;
+        font-size: $fs-md;
+    }
+}
+
+input, textarea{
+    margin: 1rem 0;
+    padding: 0.7rem;
+    font-size: $fs-md;
+    display: block;
+    width: 100%;
+    max-width: 50rem;
+}
+
+input{
+    max-width: 20rem;
+}
+
+textarea{
+    max-width: 40rem;
+}
+
+button{
+    font-size: $fs-md;
+    padding: 0 1rem;
+    background-color: $bg-pri;
+    color: white;
+}
