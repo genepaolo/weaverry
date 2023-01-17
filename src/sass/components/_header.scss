@@ -6,7 +6,11 @@
     flex-flow: column;
     &__navbar{
         flex: 0 1 auto;
-        
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        z-index: 9999; 
         &__nav-item:not(:last-child){
             padding: 0 5rem;
             @include respond(tab-port){
@@ -16,18 +20,11 @@
     }
 
     &__body{
-        flex: 1 1 auto;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-25%, -50%);
         &__container{
-            transform: translateY(-7.5rem);
-            &__logo{
-                width: 100%;
-                height: auto;
-            }
             &__slogan{
                 // Temp
                 font-size: $fs-md;

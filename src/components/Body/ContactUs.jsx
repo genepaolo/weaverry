@@ -1,8 +1,6 @@
 function ContactUs(){
     return(
         <div >
-            <p>Contact Us: a;lsdkfjoa@gmail.com </p>
-            <p>We look forward to working with you</p>
             <form>
                 <label>Name</label>
                 <input></input>

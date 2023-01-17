@@ -6,7 +6,7 @@
         position: relative;
         &__svg{
             position: absolute;
-            top: -20rem;
+            top: -8rem;
             z-index: 0;
             width: 100%;
             height: auto;
@@ -75,6 +75,10 @@
     }
     & p{
         font-size: $fs-lg;
+    }
+
+    &__section:not(first-child){
+        color: red;
     }
 }
 
