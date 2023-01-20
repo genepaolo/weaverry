@@ -57,10 +57,10 @@
                         }
                     }
                 }
+                padding: 5rem 0;
             }
             &--tech{
                 max-width: 100%;
-                background-color: $bg-pri;
             }
             &--services{
             }
@@ -73,12 +73,84 @@
             font-size: $fs-md;
         }
     }
-
-    &__section:not(first-child){
-        color: red;
-    }
 }
 
+//Sections
+
+.bgcolor--pri{
+    background: linear-gradient(to right, $bg-pri, $bg-pri2, $bg-pri) ;
+    color: $fc-pri;
+}
+
+.bgcolor--sec{
+    background: $bg-sec;
+    color: $fc-ter;
+}
+
+.wbody{
+    &__section{
+        padding-top: 1rem;
+        width: 100%;
+        min-height: 90vh;
+        &__div{
+            height: 0.25rem;
+            width: 7rem
+        }
+    }
+    &__section:not(:first-child){
+        padding-top: $sec-pad-top;
+    }
+}
+//Challenges
+
+.challenges{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    @include respond(tab-port){
+        display: block;
+    }
+    &__infocard{
+        grid-row: 1 / 2;
+        text-align: center;
+        padding: 2rem;
+        &__number{
+            font-size: 4rem;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+//Service 2
+//Accordian
+
+.accordion{
+    background-color: inherit;
+
+}
+.accordion-button{
+    background-color: inherit;
+    color: white;
+}
+.accordion-item{
+    margin: 2rem 0;
+    background-color: inherit;
+}
+
+.accordion:focus, .accordion-button:focus, .accordion-header:focus, .accordion-item{
+    border:none;
+    outline: none;
+    background-color: inherit;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed){
+    color: inherit;
+    background-color: inherit;
+    outline: none;
+    box-shadow: none;
+}
 
 // Service Card
 .services{
@@ -130,22 +202,25 @@
     }
 
 }
-
-#servicecard-top{
-    background-size: cover;
-    border-radius: 5% 5% 0% 0%;
-    height: 15rem;
-}
-
-#servicecard-header{
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    padding: 0.4rem;
-    width: 100%;
-    background-color: white;
-    opacity: 0.90;
-    transform: rotate(-25deg) translate(-25%, -1rem);
+.servicecard{
+    background-color: $bg-sec;
+    &--top{
+        background-size: cover;
+        border-radius: 5% 5% 0% 0%;
+        height: 15rem;
+    }
+    &--header{
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+        width: 150%;
+        background-color: $bg-sec;
+        opacity: 0.90;
+        transform: rotate(-25deg) translate(-35%, -3rem);
+    }
+    &--info{
+        
+    }
 }
 
 .tech{

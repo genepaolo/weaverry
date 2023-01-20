@@ -1,7 +1,6 @@
 function ContactUs(){
     return(
         <div >
-            <p>We look forward to working with you!</p>
             <br></br>
             <form action="https://formsubmit.co/a15767324075deea15db9fa3f1d7c219" method="POST">
                 <input type="text" name="Name" placeholder="Full Name" required></input>

@@ -1,15 +1,15 @@
 // Color scheme
 $bg-pri: #122440;
-// $bg-pri: #7BC0FF;
 $bg-sec: #EBF0F2;
-// $bg-sec: #FFFDF4;
 $bg-ter: #706C61;
+$bg-pri2: #233551;
 
 // Font Colors
 
 $fc-pri: #FFFDF4;
 $fc-sec: #706C61;
-$fc-ter: rgb(41, 40, 40);
+$fc-ter: #233551;
+$fc-qua:#7BC0FF;
 
 // Font Sizes
 $fs-sm: 1rem;
@@ -19,3 +19,6 @@ $fs-xlg: 3rem;
 
 // Initial Animation
 $t-init: 1.5s;
+
+//Section Separating Padding
+$sec-pad-top: 6rem;

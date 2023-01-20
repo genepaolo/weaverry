@@ -11,9 +11,9 @@ function Tech(){
     const techName = ["AWS","GCP","Firebase","MongoDB","HTML","JavaScript","CSS","React"];
     return(
     <div className="wbody__content__section__container tech">
-        <h2>Technology we work with</h2>
+        {/* <h2>Technology we work with</h2> */}
         {tech.map((img, index) => (
-                <div className="col-lg-3 col-md-6 col-6">
+                <div key={"tech" + index} className="col-lg-3 col-md-6 col-6">
                     <img src={img}></img>
                     <p><i>{techName[index]}</i></p>
                 </div>

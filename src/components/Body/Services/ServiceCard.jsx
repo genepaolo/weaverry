@@ -1,18 +1,18 @@
-import service from "../../resources/body/tech1.jpg";
+import service from "../../../resources/body/tech1.jpg";
 function ServiceCard(props){
     const tint = 'rgb(194, 133, 207, 0.40)';
     return(
     <div className="servicecard">
-            <div id="servicecard-top" style={{
+            <div className="servicecard--top" style={{
                 backgroundImage: `url(${service})`,
                 backgroundColor: tint,
                 backgroundBlendMode: 'lighten'
             }}>
-                <div id="servicecard-header">
+                <div className="servicecard--header">
                     <h4>Service</h4>
                 </div>
             </div>
-            <div>
+            <div className="servicecard--info">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quisquam velit dolorem nesciunt repudiandae </p>
             </div>
             

@@ -1,10 +1,13 @@
 import {ReactComponent as Vector1} from "../../resources/body/vector1.svg";
 import {ReactComponent as Vector2} from "../../resources/body/vector2.svg";
 import {ReactComponent as Vector3} from "../../resources/body/vector3.svg";
-import Services from "./Services"
-import ContactUs from "./ContactUs";
+import Services from "./Services/Services"
+import ContactUs from "./ContactUs/ContactUs";
 import Section from "./Section";
 import Tech from "./Tech";
+import Scroller from "./Scroller";
+import Challenges from "./Challenges/Challenges";
+
 function Body(){
 
     return(
@@ -20,33 +23,23 @@ function Body(){
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
                         dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
                 </div> */}
-                <Section title="Challenge" pri={false}>
-                    
+                <Section title="Challenge" subtitle="Many organizations are stuck when it comes to transformation, because they haven’t put the right foundation in place to enable change." pri={false}>
+                    <Challenges></Challenges>
                 </Section>
-                <Section title="What we do" pri={true}>
-                    
-                </Section>
-                {/* {/* <div className="wbody__content__section wbody__content__section--carousel">
-                <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about ">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
-                        dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
-                </div>
-                {/* <div className="wbody__content__section wbody__content__section--carousel">
-                    <Carousel></Carousel>
-                </div> */}
-                <div className="wbody__content__section wbody__content__section--tech">
-                    <Scroller></Scroller>
-                </div> */}
-
-                <div className="wbody__content__section wbody__content__section--services">
+                
+                <Section title="What We Do" subtitle="We propel your transformation forward by doing six things exceptionally well." pri={true}>
                     <Services></Services>
-                </div>
-                <div className="wbody__content__section wbody__content__section--tech ">
+                </Section>
+
+                <Section title="How we do it" pri={false}>
+
+                </Section>
+
+                <Section title="Technologies" pri={true}>
                     <Tech></Tech>
-                </div>
+                </Section>
 
                 <Section title="Contact Us" subtitle="We look forward to working with you">
-                <div className="wbody__content__section wbody__content__section--contactus ">
                     <ContactUs></ContactUs>
                 </Section>
             </div>
