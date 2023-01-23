@@ -1,8 +1,6 @@
 import {useState, useEffect} from "react";
-import ServiceCard from "./ServiceCard";
 import { serviceInfo } from "./ServiceJSON";
 import Lottie from "lottie-react";
-import anim1 from "../../../resources/lottie/104354-dimagital-media-technologies-pvt-ltd.json";
 import variables from "../../../sass/abstract/_variables.scss";
 
 function Services(){
