@@ -36,6 +36,15 @@
     transform: translate3d(-50%, 0, 0);
   }
 }
+:export {
+  bgSec: #EBF0F2;
+  fcQua: #7BC0FF;
+}
+
+:root {
+  --service-bar: $bg-sec;
+}
+
 body {
   margin: 0;
   font-size: 14px;
@@ -282,6 +291,18 @@ h4 {
 .accordion-item {
   margin: 2rem 0;
   background-color: inherit;
+  position: relative;
+}
+
+.accordion-item::after {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  background-color: var(--service-bar);
+  content: "";
 }
 
 .accordion:focus, .accordion-button:focus, .accordion-header:focus, .accordion-item {
@@ -296,10 +317,6 @@ h4 {
   background-color: inherit;
   outline: none;
   box-shadow: none;
-}
-
-.accordion .card-header::after {
-  display: none;
 }
 
 .services {

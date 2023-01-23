@@ -3,20 +3,42 @@ import ServiceCard from "./ServiceCard";
 import { serviceInfo } from "./ServiceJSON";
 import Lottie from "lottie-react";
 import anim1 from "../../../resources/lottie/104354-dimagital-media-technologies-pvt-ltd.json";
+import variables from "../../../sass/abstract/_variables.scss";
+
 function Services(){
 
     const [prev, setPrev] = useState(-1);
     const [selected, setSelected] = useState(-1);
 
-    // useEffect(() => {
+    useEffect(() => {
+        if(selected>=0 && selected<serviceInfo.length){
+            const item = document.getElementById("flush-heading" + selected);
+            item.style.color = variables.fcQua;
+        }
 
-    // },[selected]);
+        for(let i = 0;i<serviceInfo.length;i++){
+                
+            const sidebar = document.getElementById("accordion-item" + i);
+            if(selected==i){
+                
+                sidebar.style.setProperty("--service-bar", variables.fcQua);
+            }else{
+                sidebar.style.setProperty("--service-bar", variables.bgSec);
+            }
+        }
+
+    },[selected]);
 
     function selectButton(index){
         if(index>=0 && index<serviceInfo.length){
+            if(selected==index){
+                setSelected(-1);
+            }else{
+                setSelected(index);
+            }
             setPrev(selected);
-            setSelected(index);
         }
+
     }
 
     function displayLottie(index){
@@ -32,7 +54,7 @@ function Services(){
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 {
                     serviceInfo.map((obj,i) => (
-                        <div class="accordion-item" key={i}>
+                        <div class="accordion-item" key={i} id={"accordion-item" + i}>
                             <h3 class="accordion-header" id={"flush-heading"+i}>
                                 <button onClick={()=>selectButton(i)} class="accordion-button collapsed text-decoration-none " type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse"+i} aria-expanded="false" aria-controls={"flush-collapse"+i}>
                                     {obj.title}

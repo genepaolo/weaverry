@@ -136,6 +136,18 @@
 .accordion-item{
     margin: 2rem 0;
     background-color: inherit;
+    position: relative;
+}
+
+.accordion-item::after{
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    background-color: var(--service-bar);
+    content: "";
 }
 
 .accordion:focus, .accordion-button:focus, .accordion-header:focus, .accordion-item{

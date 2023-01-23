@@ -22,3 +22,9 @@ $t-init: 1.5s;
 
 //Section Separating Padding
 $sec-pad-top: 6rem;
+
+
+:export {
+    bgSec: $bg-sec;
+    fcQua: $fc-qua;
+}

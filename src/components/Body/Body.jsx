@@ -7,6 +7,7 @@ import Section from "./Section";
 import Tech from "./Tech";
 import Scroller from "./Scroller";
 import Challenges from "./Challenges/Challenges";
+import HWDI from "./HWDI/HWDI";
 
 function Body(){
 
@@ -18,11 +19,6 @@ function Body(){
                 <Vector2 className="wbody__svgs__svg wbody__svgs__svg--2"></Vector2>
             </div>
             <div className="wbody__content">
-                {/* <div data-aos="fade-right" data-aos-duration="2000" className="wbody__content__section wbody__content__section--about">
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores cupiditate laborum porro ex recusan
-                        dae at rerum modi nobis explicabo fugit magnam debitis, ut totam, doloribus vitae maiores placeat consequatur? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusamus, voluptas odit culpa nemo cupiditate eos dignissimos dolores praesentium in earum exercitationem labore adipisci fugit eligendi distinctio impedit beatae quidem?</p>
-                </div> */}
                 <Section title="Challenge" subtitle="Many organizations are stuck when it comes to transformation, because they haven’t put the right foundation in place to enable change." pri={false}>
                     <Challenges></Challenges>
                 </Section>
@@ -31,8 +27,8 @@ function Body(){
                     <Services></Services>
                 </Section>
 
-                <Section title="How we do it" pri={false}>
-
+                <Section title="How We Do It" pri={false}>
+                    <HWDI></HWDI>
                 </Section>
 
                 <Section title="Technologies" pri={true}>
