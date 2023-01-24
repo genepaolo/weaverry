@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import { serviceInfo } from "./ServiceJSON";
 import Lottie from "lottie-react";
 import variables from "../../../sass/abstract/_variables.scss";
+import { StyleSheet, View } from 'react-native';
 
 function Services(){
 
@@ -42,7 +43,10 @@ function Services(){
     function displayLottie(index){
         if(index<0 || index >= serviceInfo.length) return (<></>);
         return (
-            <Lottie animationData={serviceInfo[index].lottie} loop={true} style={{width: "400px", height:"250px"}}></Lottie>
+            <View className="lottie">
+                <Lottie className="lottie" animationData={serviceInfo[index].lottie} loop={true} ></Lottie>
+            </View>
+            
         );
     }
 
@@ -59,15 +63,37 @@ function Services(){
                                 </button>
                             </h3>
                             <div id={"flush-collapse"+i} class="accordion-collapse collapse" aria-labelledby={"flush-heading"+i} data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body"><h4>{obj.desc}</h4></div>
+                                <div class="accordion-body"><p>{obj.desc}</p></div>
                             </div>
                         </div>)
                     )
                 }
                 
             </div>
-
-           {displayLottie(selected)}
+            <div class="service2__lottie">
+            {
+                    serviceInfo.map((obj,i) => {
+                        if(i==selected){
+                            return(
+                                <View className="lottie">
+                                    <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                </View>
+                        
+                            )
+                        }else{
+                            return(
+                                <View className="lottie" style={{display: "none"}}>
+                                    <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                </View>
+                            )
+                        }
+                    })
+                        
+                        
+                    
+                }
+            </div>
+           
             
     </div>
     );

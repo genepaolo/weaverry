@@ -127,7 +127,10 @@
 
 .accordion{
     background-color: inherit;
-
+    &-body p{
+        font-size: $fs-sm;
+        color: $fc-qui;
+    }
 }
 .accordion-button{
     background-color: inherit;
@@ -163,6 +166,24 @@
     outline: none;
     box-shadow: none;
 }
+
+.services2{
+    
+    display: grid;
+    column-gap: 5rem;
+    grid-template-columns: 45% 55%;
+    @include respond(tab-port){
+        display: block;
+    }
+}
+.lottie{
+    max-width: 50%;
+    max-height: 300px;
+    padding: auto;
+    text-align: center;
+}
+
+
 
 // Service Card
 .services{

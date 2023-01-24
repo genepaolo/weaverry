@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import React from "react";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Aos from 'aos';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   // Initialize AOS Animations
   Aos.init({ once: true, });
   const [showNavbar, setShowNavbar] = React.useState(true);
-
+  const [y, setY] = useState(window.scrollY);
   useEffect(() =>{
 
     const timer = setTimeout(() => {
@@ -27,14 +27,21 @@ function App() {
       clearTimeout(timer);
     }
 
-  }, []);
+  }, [y]);
 
-  const handleScroll = () => {
-    if(window.scrollY > 50){
-      setShowNavbar(false);
-    }else{
+  const handleScroll = (e) => {
+    const navbar = document.getElementById("navbar");
+    if(window.scrollY <= 50 || y > window.scrollY){
       setShowNavbar(true);
+      if(window.scrollY <= 50){
+        navbar.classList.remove("navbar__scroll");
+      }else{
+        navbar.classList.add("navbar__scroll");
+      }
+    }else{
+      setShowNavbar(false);
     }
+    setY(window.scrollY);
   };
 
   return (

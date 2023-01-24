@@ -1,7 +1,7 @@
 import {ReactComponent as Weaverry} from "../../resources/header/weaverry.svg";
 function Navbar() {
     return (
-        <nav class="header__navbar navbar navbar-expand-lg animate__animated animate__slideInDown">
+        <nav id="navbar" class="header__navbar navbar navbar-expand-lg animate__animated animate__slideInDown">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <Weaverry className="header__body__container__logo"></Weaverry>
@@ -14,7 +14,7 @@ function Navbar() {
                         <a class="nav-link" href="/">Services</a>
                     </li>
                     <li class="header__navbar__nav-item">
-                        <a class="nav-link" href="/">Contact Us</a>
+                        <a class="nav-link" href="/">Contact</a>
                     </li>
                 </ul>
             </div>
