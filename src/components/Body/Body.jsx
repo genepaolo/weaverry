@@ -8,8 +8,27 @@ import Tech from "./Tech";
 import Scroller from "./Scroller";
 import Challenges from "./Challenges/Challenges";
 import HWDI from "./HWDI/HWDI";
+import React,{useState, useEffect} from "react";
+import { useWindowDimension } from "../common/UseWindowDimension";
 
 function Body(){
+    const [windowDimensions, setWindowDimensions] = useWindowDimension();
+    // function getWindowDimensions() {
+    //     const { innerWidth: width, innerHeight: height } = window;
+    //     return {
+    //       width,
+    //       height
+    //     };
+    // }
+
+    // useEffect(()=>{
+    //     function handleResize() {
+    //         setWindowDimensions(getWindowDimensions());
+    //     }
+        
+    //     window.addEventListener('resize', handleResize);
+    //     return () => window.removeEventListener('resize', handleResize);
+    // },[windowDimensions]);
 
     return(
         <div className="wbody">
@@ -24,11 +43,11 @@ function Body(){
                 </Section>
                 
                 <Section title="What We Do" subtitle="We propel your transformation forward by doing six things exceptionally well." pri={true}>
-                    <Services></Services>
+                    <Services d={windowDimensions}></Services>
                 </Section>
 
                 <Section title="How We Do It" pri={false}>
-                    <HWDI></HWDI>
+                    <HWDI d={windowDimensions}></HWDI>
                 </Section>
 
                 <Section title="Technologies" pri={true}>

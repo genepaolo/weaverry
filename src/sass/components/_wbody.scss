@@ -135,11 +135,17 @@
 .accordion-button{
     background-color: inherit;
     color: white;
+    &::after {
+        // Get rid of icons
+        display: none;
+    }
+    
 }
 .accordion-item{
     margin: 2rem 0;
     background-color: inherit;
     position: relative;
+    cursor: pointer;
 }
 
 .accordion-item::after{
@@ -179,9 +185,53 @@
 .lottie{
     max-width: 50%;
     max-height: 300px;
-    padding: auto;
-    text-align: center;
+    margin: auto;
 }
+
+
+// HWDI Card
+.hwdi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90vh;
+
+    &__card{
+        // border-bottom: 1px solid black;
+        &:not(:last-child){
+            // Only works if all children are under the same parent, o/w they are all alst children
+            border-bottom: 1px solid black;
+        }
+        padding: 1rem 0;
+        &-selected{
+            color: $fc-ter;
+        }
+        &-noselect{
+            color: $fc-qui;
+        }
+    }
+    &__img{
+        height: 100%;
+        & > img{
+            height: 100%;
+        }
+    }
+    @include respond(tab-port){
+        display: block;
+        grid-template-columns: 1fr;
+        &__img{
+            width: 100%;
+            text-align: center;
+            & > img{
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+                object-position: 50% 20%;
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -270,13 +320,36 @@
     }
 }
 
+.form-disappear {
+animation: fadeOut 1s forwards;
+}
+
+
+
+@keyframes fadeOut {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+
 input, textarea{
     margin: 1rem 0;
     padding: 0.7rem;
-    font-size: $fs-md;
+    font-size: $fs-sm;
     display: block;
     width: 100%;
     max-width: 50rem;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: inherit;
+}
+
+input, textarea:focus{
+    outline: none;
 }
 
 input{
@@ -288,8 +361,12 @@ textarea{
 }
 
 button{
-    font-size: $fs-md;
-    padding: 0 1rem;
+    border-radius: 50px;
+    font-size: $fs-sm;
+    padding: 1.2rem 4rem;
     background-color: $bg-pri;
     color: white;
+    &::before{
+        display: none;
+    }
 }

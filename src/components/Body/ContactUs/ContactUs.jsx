@@ -1,12 +1,32 @@
+import emailjs from "@emailjs/browser";
+
 function ContactUs(){
+
+    function sendForm(e) {
+        e.preventDefault();
+        // console.log(e.target);
+        emailjs.sendForm("service_2igo1ca",
+            "template_2p9ntpg",
+            "#contact-us-form",
+            "5t7PCv9PRppe9aE8H").then(function(response){
+                e.target.classList.add("form-disappear");
+                e.target.reset();
+                alert("Success! We will reply back shortly");
+            }, function(error){
+                console.log("Failed");
+                alert("Error occurred. Try again later");
+            })
+        
+
+    }
+
     return(
         <div >
             <br></br>
-            <form action="https://formsubmit.co/a15767324075deea15db9fa3f1d7c219" method="POST">
-                <input type="text" name="Name" placeholder="Full Name" required></input>
-                <input type="text" name="email" placeholder="Email Address" required></input>
-                <textarea name="Message" placeholder="Message" rows="4" required></textarea>
-                <input type="hidden" name="_autoresponse" value="Thank you for your email. We will reach back with you shortly!"></input>
+            <form onSubmit={ ((e) => {sendForm(e)})} id="contact-us-form" method="POST">
+                <input type="text" name="name" placeholder="Name *" required></input>
+                <input type="text" name="email" placeholder="Email *" required></input>
+                <textarea name="message" placeholder="Message *" rows="4" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>

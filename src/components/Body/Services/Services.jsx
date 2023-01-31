@@ -4,10 +4,13 @@ import Lottie from "lottie-react";
 import variables from "../../../sass/abstract/_variables.scss";
 import { StyleSheet, View } from 'react-native';
 
-function Services(){
+function Services(props){
 
     const [prev, setPrev] = useState(-1);
     const [selected, setSelected] = useState(-1);
+    const [isWide, setIsWide] = useState(props.d.width > 990);
+    //const [windowDimensions, setWindowDimensions] = useState(props.d);
+    
 
     useEffect(() => {
         if(selected>=0 && selected<serviceInfo.length){
@@ -25,8 +28,14 @@ function Services(){
                 sidebar.style.setProperty("--service-bar", variables.bgSec);
             }
         }
+        if(props.d.width<=990){
+            setIsWide(false);
+        }else{
+            setIsWide(true);
+        }
 
-    },[selected]);
+    },[selected,props.d]);
+
 
     function selectButton(index){
         if(index>=0 && index<serviceInfo.length){
@@ -38,16 +47,6 @@ function Services(){
             setPrev(selected);
         }
 
-    }
-
-    function displayLottie(index){
-        if(index<0 || index >= serviceInfo.length) return (<></>);
-        return (
-            <View className="lottie">
-                <Lottie className="lottie" animationData={serviceInfo[index].lottie} loop={true} ></Lottie>
-            </View>
-            
-        );
     }
 
     return(
@@ -64,6 +63,12 @@ function Services(){
                             </h3>
                             <div id={"flush-collapse"+i} class="accordion-collapse collapse" aria-labelledby={"flush-heading"+i} data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body"><p>{obj.desc}</p></div>
+                                {
+                                    !isWide && <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                }
+                                
+                        
+                            
                             </div>
                         </div>)
                     )
@@ -74,17 +79,13 @@ function Services(){
             {
                     serviceInfo.map((obj,i) => {
                         if(i==selected){
-                            return(
-                                <View className="lottie">
-                                    <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
-                                </View>
+                            return( isWide && 
+                                <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                         
                             )
                         }else{
-                            return(
-                                <View className="lottie" style={{display: "none"}}>
-                                    <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
-                                </View>
+                            return( isWide &&
+                                <Lottie style={{display:"none"}} className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                             )
                         }
                     })

@@ -297,11 +297,15 @@ h4 {
   background-color: inherit;
   color: white;
 }
+.accordion-button::after {
+  display: none;
+}
 
 .accordion-item {
   margin: 2rem 0;
   background-color: inherit;
   position: relative;
+  cursor: pointer;
 }
 
 .accordion-item::after {
@@ -343,8 +347,47 @@ h4 {
 .lottie {
   max-width: 50%;
   max-height: 300px;
-  padding: auto;
-  text-align: center;
+  margin: auto;
+}
+
+.hwdi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 90vh;
+}
+.hwdi__card {
+  padding: 1rem 0;
+}
+.hwdi__card:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.hwdi__card-selected {
+  color: #233551;
+}
+.hwdi__card-noselect {
+  color: #939088;
+}
+.hwdi__img {
+  height: 100%;
+}
+.hwdi__img > img {
+  height: 100%;
+}
+@media (max-width: 990px) {
+  .hwdi {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .hwdi__img {
+    width: 100%;
+    text-align: center;
+  }
+  .hwdi__img > img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
 }
 
 .services {
@@ -429,13 +472,32 @@ h4 {
   font-size: 1.4rem;
 }
 
+.form-disappear {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 input, textarea {
   margin: 1rem 0;
   padding: 0.7rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   display: block;
   width: 100%;
   max-width: 50rem;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: inherit;
+}
+
+input, textarea:focus {
+  outline: none;
 }
 
 input {
@@ -447,10 +509,14 @@ textarea {
 }
 
 button {
-  font-size: 1.4rem;
-  padding: 0 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 1.2rem 4rem;
   background-color: #122440;
   color: white;
+}
+button::before {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

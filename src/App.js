@@ -9,6 +9,8 @@ import Aos from 'aos';
 
 function App() {
 
+
+
   // Initialize AOS Animations
   Aos.init({ once: true, });
   const [showNavbar, setShowNavbar] = React.useState(true);
@@ -35,7 +37,7 @@ function App() {
       setShowNavbar(true);
       if(window.scrollY <= 50){
         navbar.classList.remove("navbar__scroll");
-      }else{
+      }else if(navbar!=null){
         navbar.classList.add("navbar__scroll");
       }
     }else{

@@ -3,28 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "lottie-react": "^2.3.1",
+    "npm-sass": "^3.1.0",
     "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
     "react-countup": "^6.4.0",
     "react-dom": "^18.2.0",
     "react-native": "^0.71.1",
     "react-native-web": "^0.18.10",
     "react-scripts": "^5.0.1",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.54.3",
+    "sass": "^1.57.1",
+    "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "sass": "sass ./src/sass/main.scss ./src/index.css",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +49,10 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.3.1"
+    "@svgr/webpack": "^6.5.1",
+    "buffer": "npm:buffer@6.0.3",
+    "crypto": "npm:crypto-browserify@3.12.0",
+    "stream": "npm:stream-browserify@3.0.0",
+    "util": "npm:util@0.12.5"
   }
 }
