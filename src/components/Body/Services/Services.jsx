@@ -52,19 +52,19 @@ function Services(props){
     return(
     <div className="wbody__content__section__container services2">
 
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div className="accordion accordion-flush" id="accordionFlushExample">
                 {
                     serviceInfo.map((obj,i) => (
-                        <div class="accordion-item" key={i} id={"accordion-item" + i}>
-                            <h3 class="accordion-header" id={"flush-heading"+i}>
-                                <button onClick={()=>selectButton(i)} class="accordion-button collapsed text-decoration-none " type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse"+i} aria-expanded="false" aria-controls={"flush-collapse"+i}>
+                        <div className="accordion-item" key={i} id={"accordion-item" + i}>
+                            <h3 className="accordion-header" id={"flush-heading"+i}>
+                                <button onClick={()=>selectButton(i)} className="accordion-button collapsed text-decoration-none " type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse"+i} aria-expanded="false" aria-controls={"flush-collapse"+i}>
                                     {obj.title}
                                 </button>
                             </h3>
-                            <div id={"flush-collapse"+i} class="accordion-collapse collapse" aria-labelledby={"flush-heading"+i} data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body"><p>{obj.desc}</p></div>
+                            <div id={"flush-collapse"+i} className="accordion-collapse collapse" aria-labelledby={"flush-heading"+i} data-bs-parent="#accordionFlushExample">
+                                <div className="accordion-body"><p>{obj.desc}</p></div>
                                 {
-                                    !isWide && <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                    !isWide && <Lottie key={"lottie"+i} className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                                 }
                                 
                         
@@ -75,17 +75,17 @@ function Services(props){
                 }
                 
             </div>
-            <div class="service2__lottie">
+            <div className="service2__lottie">
             {
                     serviceInfo.map((obj,i) => {
                         if(i==selected){
                             return( isWide && 
-                                <Lottie className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                <Lottie key={"lottie"+i}  className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                         
                             )
                         }else{
                             return( isWide &&
-                                <Lottie style={{display:"none"}} className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
+                                <Lottie key={"lottie"+i}  style={{display:"none"}} className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                             )
                         }
                     })

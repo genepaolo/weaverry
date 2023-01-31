@@ -40,14 +40,14 @@ function HWDI(props){
             imgs.map((x,i) => {
                 if(i==selected){
                     return(
-                        <div className="hwdi__img">
+                        <div key={"hwdi-img"+i} className="hwdi__img">
                             <img src={x}></img>
                         </div>
                 
                     )
                 }else{
                     return(
-                        <div style={{display:"none"}} className="hwdi__img">
+                        <div key={"hwdi-img"+i} style={{display:"none"}} className="hwdi__img">
                             <img   src={x}></img>
                         </div>
                     )

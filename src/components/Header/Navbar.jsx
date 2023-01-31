@@ -1,20 +1,20 @@
 import {ReactComponent as Weaverry} from "../../resources/header/weaverry.svg";
 function Navbar() {
     return (
-        <nav id="navbar" class="header__navbar navbar navbar-expand-lg animate__animated animate__slideInDown">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
+        <nav id="navbar" className="header__navbar navbar navbar-expand-lg animate__animated animate__slideInDown">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="/">
                     <Weaverry className="header__body__container__logo"></Weaverry>
                 </a>
-                <ul class="navbar-nav ms-auto">
-                    <li class="header__navbar__nav-item">
-                        <a class="nav-link" aria-current="page" href="/">About</a>
+                <ul className="navbar-nav ms-auto">
+                    <li className="header__navbar__nav-item">
+                        <a className="nav-link" aria-current="page" href="/">About</a>
                     </li>
-                    <li class="header__navbar__nav-item">
-                        <a class="nav-link" href="/">Services</a>
+                    <li className="header__navbar__nav-item">
+                        <a className="nav-link" href="/">Services</a>
                     </li>
-                    <li class="header__navbar__nav-item">
-                        <a class="nav-link" href="/">Contact</a>
+                    <li className="header__navbar__nav-item">
+                        <a className="nav-link" href="/">Contact</a>
                     </li>
                 </ul>
             </div>
