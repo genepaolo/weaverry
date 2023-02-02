@@ -13,7 +13,7 @@ function HWDI(props){
                 const div = document.getElementById("hwdicard" + i);
                 div.classList.remove("hwdi__card-selected");
                 div.classList.remove("hwdi__card-noselect");
-                if(selected==i){
+                if(selected===i){
                     div.classList.add("hwdi__card-selected");
                 }else{
                     div.classList.add("hwdi__card-noselect");
@@ -27,7 +27,7 @@ function HWDI(props){
         }
         
         
-    },[selected, props.d, isWide]);
+    },[selected, props.d, isWide, imgs]);
 
     function handleClick(i){
         setSelected(i);
@@ -38,17 +38,17 @@ function HWDI(props){
         <div>
         { isWide && 
             imgs.map((x,i) => {
-                if(i==selected){
+                if(i===selected){
                     return(
                         <div key={"hwdi-img"+i} className="hwdi__img">
-                            <img src={x}></img>
+                            <img src={x} alt="img"></img>
                         </div>
                 
                     )
                 }else{
                     return(
                         <div key={"hwdi-img"+i} style={{display:"none"}} className="hwdi__img">
-                            <img   src={x}></img>
+                            <img src={x} alt="img"></img>
                         </div>
                     )
                 }
@@ -64,7 +64,7 @@ function HWDI(props){
                         title={x.title}
                         info={x.desc}
                         index={i}
-                        selected={selected==i}
+                        selected={selected===i}
                         isWide={isWide}
                         src={imgs[i]}
                         />

@@ -2,11 +2,9 @@ import {useState, useEffect} from "react";
 import { serviceInfo } from "./ServiceJSON";
 import Lottie from "lottie-react";
 import variables from "../../../sass/abstract/_variables.scss";
-import { StyleSheet, View } from 'react-native';
 
 function Services(props){
 
-    const [prev, setPrev] = useState(-1);
     const [selected, setSelected] = useState(-1);
     const [isWide, setIsWide] = useState(props.d.width > 990);
     //const [windowDimensions, setWindowDimensions] = useState(props.d);
@@ -21,7 +19,7 @@ function Services(props){
         for(let i = 0;i<serviceInfo.length;i++){
                 
             const sidebar = document.getElementById("accordion-item" + i);
-            if(selected==i){
+            if(selected===i){
                 
                 sidebar.style.setProperty("--service-bar", variables.fcQua);
             }else{
@@ -39,12 +37,11 @@ function Services(props){
 
     function selectButton(index){
         if(index>=0 && index<serviceInfo.length){
-            if(selected==index){
+            if(selected===index){
                 setSelected(-1);
             }else{
                 setSelected(index);
             }
-            setPrev(selected);
         }
 
     }
@@ -78,7 +75,7 @@ function Services(props){
             <div className="service2__lottie">
             {
                     serviceInfo.map((obj,i) => {
-                        if(i==selected){
+                        if(i===selected){
                             return( isWide && 
                                 <Lottie key={"lottie"+i}  className="lottie" animationData={serviceInfo[i].lottie} loop={true} ></Lottie>
                         

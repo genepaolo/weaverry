@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import CountUp, { startAnimation } from 'react-countup';
+import React, { useState } from 'react';
+import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
 function ChallengesInfo(props){

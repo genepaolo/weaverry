@@ -11,7 +11,7 @@ function HWDICard(props){
                     <h5 className="hwdi__card--info">{props.info}</h5>
                     <br></br>
                     <div className="hwdi__img">
-                        <img loading="lazy" src={props.src}></img>
+                        <img loading="lazy" src={props.src} alt="img"></img>
                     </div>
                     
                 </div>

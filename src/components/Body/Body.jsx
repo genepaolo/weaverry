@@ -5,14 +5,12 @@ import Services from "./Services/Services"
 import ContactUs from "./ContactUs/ContactUs";
 import Section from "./Section";
 import Tech from "./Tech";
-import Scroller from "./Scroller";
 import Challenges from "./Challenges/Challenges";
 import HWDI from "./HWDI/HWDI";
-import React,{useState, useEffect} from "react";
 import { useWindowDimension } from "../common/UseWindowDimension";
 
 function Body(){
-    const [windowDimensions, setWindowDimensions] = useWindowDimension();
+    const [windowDimensions] = useWindowDimension();
     // function getWindowDimensions() {
     //     const { innerWidth: width, innerHeight: height } = window;
     //     return {

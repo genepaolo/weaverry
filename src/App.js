@@ -11,16 +11,36 @@ function App() {
 
 
 
+
   // Initialize AOS Animations
   Aos.init({ once: true, });
   const [showNavbar, setShowNavbar] = React.useState(true);
   const [y, setY] = useState(window.scrollY);
+
+
+
   useEffect(() =>{
+
 
     const timer = setTimeout(() => {
       const app = document.querySelector(".App");
       app.classList.remove("noscroll");
     }, 1500);
+    
+    const handleScroll = (e) => {
+      const navbar = document.getElementById("navbar");
+      if(window.scrollY <= 50 || y > window.scrollY){
+        setShowNavbar(true);
+        if(window.scrollY <= 50){
+          navbar.classList.remove("navbar__scroll");
+        }else if(navbar!=null){
+          navbar.classList.add("navbar__scroll");
+        }
+      }else{
+        setShowNavbar(false);
+      }
+      setY(window.scrollY);
+    };
 
     window.addEventListener("scroll", handleScroll);
 
@@ -30,21 +50,6 @@ function App() {
     }
 
   }, [y]);
-
-  const handleScroll = (e) => {
-    const navbar = document.getElementById("navbar");
-    if(window.scrollY <= 50 || y > window.scrollY){
-      setShowNavbar(true);
-      if(window.scrollY <= 50){
-        navbar.classList.remove("navbar__scroll");
-      }else if(navbar!=null){
-        navbar.classList.add("navbar__scroll");
-      }
-    }else{
-      setShowNavbar(false);
-    }
-    setY(window.scrollY);
-  };
 
   return (
     <div className="App noscroll">

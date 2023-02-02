@@ -14,7 +14,7 @@ function Tech(){
         {/* <h2>Technology we work with</h2> */}
         {tech.map((img, index) => (
                 <div key={"tech" + index} className="col-lg-3 col-md-6 col-6">
-                    <img src={img}></img>
+                    <img src={img} alt="img"></img>
                     <p><i>{techName[index]}</i></p>
                 </div>
         ))}
