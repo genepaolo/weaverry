@@ -3,6 +3,9 @@
         @media (max-width: 600px){@content};
     }
     @if $breakpoint == tab-port{
+        @media (max-width: 767px){@content};
+    }
+    @if $breakpoint == tab-half{
         @media (max-width: 990px){@content};
     }
     @if $breakpoint == tab-land{
@@ -11,4 +14,8 @@
     @if $breakpoint == big-desktop{
         @media (max-width: 1800px){@content};
     }
+}
+
+:export{
+    tabPort: 767;
 }

@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-native": "^0.71.1",
     "react-native-web": "^0.18.10",
+    "react-scroll": "^1.8.9",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.57.1",
     "util": "^0.12.5",

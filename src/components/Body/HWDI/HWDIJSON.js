@@ -1,17 +1,20 @@
 export const hwdiInfo = [
     {
-        title:  "title1",
-        desc:   "desc1",
-        img: require("../../../resources/imgs/stock-photo-successful-company-with-happy-workers-business-meeting-office-concept-1860560743.jpeg")
+        title:  "Strategy & Roadmap",
+        desc:   "Our team of consultants collaborates with clients to create comprehensive technology strategies and plans that align with their business goals and meet their technological requirements.",
+        imgS: require("../../../resources/imgs/hwdi1.jpg"),
+        imgL: require("../../../resources/imgs/hwdi1.jpg")
     },
     {
-        title:  "title2",
-        desc:   "desc2",
-        img: require("../../../resources/imgs/stock-photo-smiling-businesswoman-standing-in-front-of-flip-chart-for-presentation-with-team-woman-giving-1404793256.jpeg")
+        title:  "Design & Plan",
+        desc:   "We rely on our consultants' deep expertise, innovation-driven approach, and creative skills to engineer digital delivery platforms that are unmatched in quality and customized to fit our clients' unique technological landscapes.",
+        imgS: require("../../../resources/imgs/hwdi2.jpg"),
+        imgL: require("../../../resources/imgs/hwdi2.jpg")
     },
     {
-        title:  "title3",
-        desc:   "desc3",
-        img: require("../../../resources/imgs/stock-photo-successful-company-with-happy-workers-business-meeting-office-concept-1860560743.jpeg")
+        title:  "Deployment & Management",
+        desc:   "Our delivery and managed services teams collaborate to ensure that our solutions are implemented precisely and efficiently the first time, while also offering the ability to assume, transform, and manage our clients' IT operations to maximize their long-term effectiveness and efficiency.",
+        imgS: require("../../../resources/imgs/hwdi3.jpg"),
+        imgL: require("../../../resources/imgs/hwdi3.jpg")
     }
 ];

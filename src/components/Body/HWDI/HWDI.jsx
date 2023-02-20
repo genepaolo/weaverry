@@ -4,9 +4,9 @@ import {hwdiInfo} from "./HWDIJSON";
 function HWDI(props){
     
     const [selected, setSelected] = useState(0);
-    const [isWide, setIsWide] = useState(props.d.width > 990);
-    const imgs = hwdiInfo.map((x) => x.img);
-
+    const [isWide, setIsWide] = useState(props.ww > props.vars.tabPort);
+    const imgs = hwdiInfo.map((x) => x.imgS);
+    const imgl = hwdiInfo.map((x) => x.imgL);
     useEffect(()=>{
         if(selected>=0 && selected<imgs.length){
             for(let i = 0;i<hwdiInfo.length;i++){
@@ -20,14 +20,14 @@ function HWDI(props){
                 }
             }
         }
-        if(props.d.width<=990){
+        if(props.ww<=props.vars.tabPort){
             setIsWide(false);
         }else{
             setIsWide(true);
         }
         
         
-    },[selected, props.d, isWide, imgs]);
+    },[selected, props.vars.tabPort, props.ww, isWide, imgs, imgl]);
 
     function handleClick(i){
         setSelected(i);
@@ -37,7 +37,7 @@ function HWDI(props){
     <div className="wbody__content__section__container hwdi">
         <div>
         { isWide && 
-            imgs.map((x,i) => {
+            imgl.map((x,i) => {
                 if(i===selected){
                     return(
                         <div key={"hwdi-img"+i} className="hwdi__img">

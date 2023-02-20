@@ -1,12 +1,12 @@
 export const serviceInfo = [
     {
         title:  "Cloud Platorms",
-        desc:   "desc",
+        desc:   "We have experiences with AWS and Google Cloud Platform services to help you get started putting your business in the cloud or migrate services.",
         lottie: require("../../../resources/lottie/104354-dimagital-media-technologies-pvt-ltd.json")
     },
     {
         title:  "Automated Workflow",
-        desc:   "desc",
+        desc:   "To reduce costs and allow you to focus on your business growth, we provide automation to your website and cloud servers.",
         lottie: require("../../../resources/lottie/76220-technology.json")
     },
     {

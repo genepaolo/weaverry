@@ -8,8 +8,15 @@ function Section(props){
         <h1  data-aos="fade-up" data-aos-duration="800" >{props.title}</h1>
         <br></br> <br></br>
         <div className={div}></div>
-        <br></br> <br></br>
-        <h1  data-aos="fade-up" data-aos-duration="800" >{props.subtitle}</h1>
+        {
+                props.subtitle && 
+                <>
+                    <br></br> <br></br>
+                    <h1  data-aos="fade-up" data-aos-duration="800" >{props.subtitle}</h1>
+                </>
+                
+        }
+        
         {props.children}
     </div>
     );

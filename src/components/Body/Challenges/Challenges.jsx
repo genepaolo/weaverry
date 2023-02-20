@@ -1,11 +1,23 @@
 import ChallengesInfo from "./ChallengesInfo";
-function Challenges(){
-    const percArray = [80,90,20];
+import {challengesInfo} from "./ChallengesJSON";
+import {useState, useEffect} from "react";
+function Challenges(props){
+
+    const [isWide, setIsWide] = useState(props.ww> props.vars.tabPort);
+    useEffect(()=>{
+        if(props.ww<=props.vars.tabPort){
+            setIsWide(false);
+        }else{
+            setIsWide(true);
+        }
+    }, [props.vars.tabPort, props.ww, isWide])
     return(
         <div className="wbody__content__section__container challenges">
-                {percArray.map(function(x,i){
-                    return <ChallengesInfo key={i} i={i} perc={x} info="Lorem ipsum dolor sit amet consectetur adipisicing elit"></ChallengesInfo>
-                })}
+                {
+                    challengesInfo.map(function(x,i){
+                        return <ChallengesInfo key={i} i={i} perc={x.perc} info={x.info} ></ChallengesInfo>
+                    })
+                }
             
 
         </div>

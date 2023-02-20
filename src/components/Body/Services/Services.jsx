@@ -6,7 +6,7 @@ import variables from "../../../sass/abstract/_variables.scss";
 function Services(props){
 
     const [selected, setSelected] = useState(-1);
-    const [isWide, setIsWide] = useState(props.d.width > 990);
+    const [isWide, setIsWide] = useState(props.ww > props.vars.tabPort);
     //const [windowDimensions, setWindowDimensions] = useState(props.d);
     
 
@@ -26,13 +26,13 @@ function Services(props){
                 sidebar.style.setProperty("--service-bar", variables.bgSec);
             }
         }
-        if(props.d.width<=990){
+        if(props.ww<=props.vars.tabPort){
             setIsWide(false);
         }else{
             setIsWide(true);
         }
 
-    },[selected,props.d]);
+    },[selected,props.vars.tabPort, props.ww]);
 
 
     function selectButton(index){

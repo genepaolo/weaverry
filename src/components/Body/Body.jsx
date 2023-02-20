@@ -8,9 +8,11 @@ import Tech from "./Tech";
 import Challenges from "./Challenges/Challenges";
 import HWDI from "./HWDI/HWDI";
 import { useWindowDimension } from "../common/UseWindowDimension";
+import vars from '../../sass/abstract/_mixins.scss';
+import { Element } from 'react-scroll';
 
 function Body(){
-    const [windowDimensions] = useWindowDimension();
+    const [ww] = useWindowDimension();
     // function getWindowDimensions() {
     //     const { innerWidth: width, innerHeight: height } = window;
     //     return {
@@ -27,7 +29,6 @@ function Body(){
     //     window.addEventListener('resize', handleResize);
     //     return () => window.removeEventListener('resize', handleResize);
     // },[windowDimensions]);
-
     return(
         <div className="wbody">
             <div className="wbody__svgs">
@@ -36,23 +37,29 @@ function Body(){
                 <Vector2 className="wbody__svgs__svg wbody__svgs__svg--2"></Vector2>
             </div>
             <div className="wbody__content">
-                <Section title="Challenge" subtitle="Many organizations are stuck when it comes to transformation, because they haven’t put the right foundation in place to enable change." pri={false}>
-                    <Challenges></Challenges>
-                </Section>
                 
-                <Section title="What We Do" subtitle="We propel your transformation forward by doing six things exceptionally well." pri={true}>
-                    <Services d={windowDimensions}></Services>
+                <Section title="Challenge" 
+                    subtitle="Plenty of companies find it difficult to transform digitally due to their lack of solid and flexible foundation that can allow for rapid changes." pri={false}>
+                    <Challenges ww={ww} vars={vars} ></Challenges>
+                </Section>
+                <Element name="aboutRef"></Element>
+                <Section title="What We Do" 
+                    subtitle="We work closely with you to optimize performance and make your lives easier." pri={true}>
+                    <Services ww={ww} vars={vars} ></Services>
                 </Section>
 
-                <Section title="How We Do It" pri={false}>
-                    <HWDI d={windowDimensions}></HWDI>
+                <Element name="servicesRef"></Element>
+                <Section title="How We Do It" 
+                    pri={false}>
+                    <HWDI ww={ww} vars={vars} ></HWDI>
                 </Section>
 
                 <Section title="Technologies" pri={true}>
                     <Tech></Tech>
                 </Section>
-
-                <Section title="Contact Us" subtitle="We look forward to working with you">
+                <Element name="contactRef"></Element>
+                <Section title="Contact Us" id="contactRef"
+                    subtitle="We look forward to working with you">
                     <ContactUs></ContactUs>
                 </Section>
             </div>

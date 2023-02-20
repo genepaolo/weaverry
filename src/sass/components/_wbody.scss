@@ -183,9 +183,16 @@
     }
 }
 .lottie{
-    max-width: 50%;
-    max-height: 300px;
+    
     margin: auto;
+    @include respond(big-desktop){
+        max-height: 500px;
+        max-width: 80%;
+    }
+    @include respond(tab-land){
+        max-width: 50%;
+        max-height: 300px;
+    }
 }
 
 
@@ -194,9 +201,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 90vh;
-
+    gap: 1rem;
     &__card{
-        // border-bottom: 1px solid black;
+        cursor: pointer;
         &:not(:last-child){
             // Only works if all children are under the same parent, o/w they are all alst children
             border-bottom: 1px solid black;
@@ -208,11 +215,24 @@
         &-noselect{
             color: $fc-qui;
         }
+        &--info{
+            @include respond(tab-half){
+                font-size: $fs-sm;
+            }
+            
+        }
     }
     &__img{
         height: 100%;
+        text-align: center;
+        @include respond(tab-land){
+            text-align: left;
+        }
         & > img{
             height: 100%;
+            @include respond(tab-half){
+                height: 80%;
+            }
         }
     }
     @include respond(tab-port){
