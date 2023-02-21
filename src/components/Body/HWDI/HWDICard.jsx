@@ -8,7 +8,7 @@ function HWDICard(props){
                 ||
                 (!props.isWide && props.selected && 
                 <div className="animate__animated animate__fadeIn">
-                    <h6 className="hwdi__card--info">{props.info}</h6>
+                    <h5 className="hwdi__card--info">{props.info}</h5>
                     <br></br>
                     <div className="hwdi__img">
                         <img src={props.src} alt="img"></img>

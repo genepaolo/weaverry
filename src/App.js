@@ -44,7 +44,6 @@ function App() {
       appRef.current.classList.remove("noscroll");
     }, 1500);
 
-    console.log(showNavbar);
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timer);
