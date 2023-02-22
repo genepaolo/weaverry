@@ -84,8 +84,12 @@ h4 {
   color: #706C61;
 }
 
+h5 {
+  font-size: 1rem;
+}
+
 h6 {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .absolute {
@@ -127,11 +131,6 @@ h6 {
 @media (max-width: 767px) {
   .header__navbar__nav-item {
     min-width: 7rem;
-  }
-}
-@media (max-width: 600px) {
-  .header__navbar__nav-item {
-    min-width: 10rem;
   }
 }
 .header__body {

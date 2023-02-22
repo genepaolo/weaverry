@@ -17,9 +17,6 @@
             @include respond(tab-port){
                 min-width: 7rem;
             }
-            @include respond(phone){
-                min-width: 10rem;
-            }
         }
     }
 
