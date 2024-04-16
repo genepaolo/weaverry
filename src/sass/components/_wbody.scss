@@ -323,9 +323,6 @@
         opacity: 0.90;
         transform: rotate(-25deg) translate(-35%, -3rem);
     }
-    &--info{
-        
-    }
 }
 
 .tech{
@@ -344,17 +341,6 @@
 
 .form-disappear {
 animation: fadeOut 1s forwards;
-}
-
-
-
-@keyframes fadeOut {
-from {
-    opacity: 1;
-}
-to {
-    opacity: 0;
-}
 }
 
 

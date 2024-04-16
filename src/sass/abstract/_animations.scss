@@ -34,12 +34,12 @@
     }
 }
 
-// Marquee Animation for Tech
-@keyframes marquee {
-    0% {
-      transform: translate3d(0, 0, 0);
+// animation for form completion
+@keyframes fadeOut {
+    from {
+        opacity: 1;
     }
-    100% {
-      transform: translate3d(-50%, 0, 0);
+    to {
+        opacity: 0;
     }
-  }
+}

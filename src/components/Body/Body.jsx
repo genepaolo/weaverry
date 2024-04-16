@@ -13,22 +13,6 @@ import { Element } from 'react-scroll';
 
 function Body(){
     const [ww] = useWindowDimension();
-    // function getWindowDimensions() {
-    //     const { innerWidth: width, innerHeight: height } = window;
-    //     return {
-    //       width,
-    //       height
-    //     };
-    // }
-
-    // useEffect(()=>{
-    //     function handleResize() {
-    //         setWindowDimensions(getWindowDimensions());
-    //     }
-        
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // },[windowDimensions]);
     return(
         <div className="wbody">
             <div className="wbody__svgs">
