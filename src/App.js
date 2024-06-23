@@ -6,10 +6,10 @@ import Footer from "./components/Footer/Footer";
 import React, { useEffect, useRef, useState } from "react";
 import Aos from 'aos';
 
+
 function App() {
   // Initialize AOS Animations
   Aos.init({ once: true });
-
   const [showNavbar, setShowNavbar] = useState(true);
   const [y, setY] = useState(window.scrollY);
   const appRef = useRef(null);

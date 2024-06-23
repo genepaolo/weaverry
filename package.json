@@ -11,6 +11,7 @@
     "aos": "^2.3.4",
     "lottie-react": "^2.3.1",
     "npm-sass": "^3.1.0",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-countup": "^6.4.0",
@@ -53,8 +54,15 @@
     "@svgr/webpack": "^6.5.1",
     "buffer": "npm:buffer@6.0.3",
     "crypto": "npm:crypto-browserify@3.12.0",
+    "dotenv": "^16.4.5",
+    "jest": "^27.5.1",
     "react-scripts": "^5.0.1",
     "stream": "npm:stream-browserify@3.0.0",
     "util": "npm:util@0.12.5"
+  },
+  "jest": {
+    "setupFiles": [
+      "dotenv/config"
+    ]
   }
 }
