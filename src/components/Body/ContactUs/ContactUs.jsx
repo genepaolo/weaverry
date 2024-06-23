@@ -2,10 +2,13 @@ import sendForm from "./sendForm";
 import emailjs from "@emailjs/browser";
 import config from '../../../config';
 function ContactUs(){
+    const serviceId = "template_2p9ntpg"
+    const templateId = 'service_qgxjvmd'
+
     async function handleSubmit(e){
         e.preventDefault();
         try{
-            sendForm(config.SERVICE_ID, config.TEMPLATE_ID, "#contact-us-form", "5t7PCv9PRppe9aE8H");
+            sendForm(serviceId, templateId, "#contact-us-form", "5t7PCv9PRppe9aE8H");
             e.target.classList.add("form-disappear");
             e.target.reset();
             alert("Success! We will reply back shortly");
